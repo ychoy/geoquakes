@@ -2,7 +2,6 @@
 
 | Objectives |
 | :--- |
-| _Students will be able to:_ |
 | Use AJAX to grab data from the USGS earthquakes API |
 | Create and compile a Handlebars template |
 | Use Handlebars templating to display data from an AJAX call on your HTML page |
@@ -30,17 +29,22 @@ Take a moment to familiarize yourself with the dataset by opening it in your bro
 
 Write out the AJAX call that will grab the data and `console.log` the list of earthquakes.
 
-#### Part 2. Add the title data to the page using Handlebars templates
+#### Part 2. Add the title data to the page
 
-Now, take a moment to familiarize yourself with the layout in `index.html`.
-- Your short term goal is to render each *title* to the `<div id="info">` of the page (see the commented example in your HTML)
-  - write the Handlebars template in the html and give it a unique `id` and remember to `type` it correctly.
-  - Compile the Handlebars template in your javascript.
-  - In the AJAX success function:
-    - pass the data into your `template()` function.
-    - Append the html to the view.
+**Add each *title* to the page**: Loop over your JSON response object, and each `title` to the page using jQuery. Aim to put each title inside the `<div id="info">` section of the page. For example:
 
-Building up an html string in javascript is no fun and the rows in the `<div id="info">` would be unwieldy to build that way. Let's add a Handlebars template.
+```html
+<div id="info">
+  <p>M 4.2 - 1km ESE of Fontana, California / 123 hours ago </p>
+  <p>M 3.1 - 6km SSW of Columbus, Ohio / 77 hours ago </p>
+</div>
+```
+
+> **Pro-tip**: When in doubt, work in your Chrome Javascript Console! You can manipulate JSON, test your ideas, and even render elements to the page without ever touching your `app.js` file!
+
+**Switch to Handlebars**: We encourage you to use Handlebars. At a certain point it's easier to work with a *template* than to build HTML strings by hand.
+
+The Handlebars javascript cdn has already been added to your page. You  will need to create an HTML template, grab its HTML content using jquery, compile it using `Handlebars` javascript library, and your data, and add it to the page.
 
 #### Part 3. Add Google Maps
 - Your next goal is to integrate Google Maps:
