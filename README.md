@@ -11,8 +11,7 @@ In this training, we attempt to put together much of the work from this week. We
 
 Developers will be able to:
 - Use AJAX to grab data from the USGS earthquakes API
-- Create and compile a Handlebars template
-- Use Handlebars templating to display data from an AJAX call on your HTML page
+- Use a template string to display data from an AJAX call on your HTML page
 - Use the Google Maps API to embed a map
 
 ## GeoQuakes
@@ -64,9 +63,7 @@ Write out the AJAX call that will grab the data and `console.log` the list of ea
 
 > **Pro-tip**: When in doubt, work in your Chrome Javascript Console! You can manipulate JSON, test your ideas, and even render elements to the page without ever touching your `app.js` file!
 
-**Switch to Handlebars**: We encourage you to use Handlebars. At a certain point it's easier to work with a *template* than to build HTML strings by hand.
-
-The Handlebars javascript cdn has already been added to your page. You  will need to create an HTML template, grab its HTML content using jquery, compile it using `Handlebars` javascript library, and your data, and add it to the page.
+**Switch to Template Strings**: We encourage you to use template strings. At a certain point it's easier to work with a *template* than to build HTML strings by hand.
 
 #### Part 3. Add Google Maps
 - Your next goal is to integrate Google Maps:
