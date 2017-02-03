@@ -19,10 +19,19 @@ $(document).on("ready", function() {
       $(".earthquakes").append(`<li>${json.features[i].properties.title}</li>`)
       var coords = json.features[i].geometry.coordinates;
       var latLng = new google.maps.LatLng(coords[1],coords[0]); 
+      
+      var house = {
+        url: "earthquake.png",
+        scaledSize: new google.maps.Size(32, 32)
+      }
+
       var marker = new google.maps.Marker({
         position: latLng,
-        map: map
+        map: map,
+        icon: house
       });
+
+
     }
   }
 
